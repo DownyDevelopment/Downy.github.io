@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+
+    color: beige;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+.logo{
+    font-size: 25px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #081b29;
+    text-decoration: none;
+    font-size: 500;
+    padding: 0 15px;
+    text-decoration: none;
+    transition: .3s;
+
+}
+
+.navbar a:hover{
+    color: #00abf0;
+}
+
+.home{
+    height: 100vh;
+    background: url('home.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+
+.home-content h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .button-box {
+    display: flex;
+    justify-content: space-between ;
+    width: 345px;
+    height: 50px;
+    
+}
+
+.button-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: #00abf0 2px solid;
+    border-radius: 10px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.button-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .7s;
+}
+
+.button-box a:hover{
+    color: #00abf0;
+}
+.button-box a:hover::before{
+    width: 100%;
+}
+
+.social-button{
+    position: absolute;
+    bottom: 200px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.social-button a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    
+
+}
+
+.social-button a :hover{
+    color: #081b29;
+}
+
+.social-button a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+    
+
+}
+
+.social-button a:hover:before{
+    width: 100%;
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .home {
+        padding: 10px;
+    }
+
+    .home-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .home-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .home-content p {
+        font-size: 0.8rem;
+    }
+
+    .button-box a {
+        display: inline-block;
+        padding: 12px 15px;
+        font-size: 1rem;
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .button-box a:hover {
+        background-color: #0056b3;
+    }
+}
